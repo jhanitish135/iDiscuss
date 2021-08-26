@@ -75,7 +75,7 @@
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
     echo '<div class="container">
         <h1 class="py-2">Start a Discussion</h1>
-        <form actiom=" '.$_SERVER["REQUEST_URI"].'" method="post">
+        <form action="'.$_SERVER["REQUEST_URI"].'" method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Problem Title</label>
                 <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
