@@ -13,7 +13,39 @@
   <body>
   <?php include 'partials/_dbconnect.php' ?>
     <?php include 'partials/_header.php' ?>
-  
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://source.unsplash.com/2400x700/?apple,coding" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/2400x700/?programmers,oracle" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/2400x700/?coding,google" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid mb-0">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
     
     <?php include 'partials/_footer.php' ?>
     
