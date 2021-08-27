@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    
+
     <title>Welcome to iDiscuss - coding forums</title>
 </head>
 
@@ -17,6 +17,7 @@
     <?php include 'partials/_dbconnect.php' ?>
     <?php include 'partials/_header.php' ?>
     
+
     <!-- slider starts here -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -74,8 +75,37 @@
                           
           ?>
 
+
+        </div>
+        
+
+        <?php
+                if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+                    echo '<!-- Button trigger modal to create category -->
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#categoryModal">
+                        Create Category
+                        </button>';
+                }
+                else{
+                    echo '<div class="container mb-2">
+                            <h1 class="py-2">Create a Category</h1>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                    
+                                    <p class="lead">You are not logged in. To Create a category please login.</p>
+                                    <button class="btn btn-outline-danger" data-toggle="modal" data-target="#loginModal">Login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                }
+                 include 'partials/_categoryModal.php';
+             ?>
         </div>
     </div>
+    
     <?php include 'partials/_footer.php' ?>
 
 

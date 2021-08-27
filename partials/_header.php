@@ -70,4 +70,12 @@ if(isset($_GET['signupsuccess']) && $_GET['signupsuccess']=="true"){
             </button>
         </div>';
 }
+if(isset($_GET['categorysuccess']) && $_GET['categorysuccess']=="true"){
+  echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
+            <strong>Success!</strong> Category created successfully.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>';
+}
 ?>
